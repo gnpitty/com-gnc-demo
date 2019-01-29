@@ -1,0 +1,28 @@
+---
+micronaut:
+    application:
+        name: com-gnc-demo
+    server:
+      port: 9020
+
+---
+datasources.default: {}
+---
+hbm2ddl:
+  auto: update
+  lazy: false
+  cache:
+    queries: false
+    use_second_level_cache: true
+    use_query_cache: false
+    # region.factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
+
+dataSource:
+  pooled: true
+  jmxExport: true
+  driverClassName: com.mysql.cj.jdbc.Driver
+  dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+  username: mcredit
+  password: Maria2017$
+  dbCreate: update
+  url: jdbc:mysql://localhost/mndemo?autoReconnect=true&useSSL=false
